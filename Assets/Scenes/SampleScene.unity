@@ -912,12 +912,12 @@ PrefabInstance:
     - target: {fileID: 993482698760319167, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
       propertyPath: m_Name
-      value: Wall Soft (1)
+      value: Wall Slippery (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6100894135524711061, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.99
+      value: -3.07
       objectReference: {fileID: 0}
     - target: {fileID: 6100894135524711061, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
@@ -927,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 6100894135524711061, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.11
+      value: 5.14
       objectReference: {fileID: 0}
     - target: {fileID: 6100894135524711061, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
@@ -968,6 +968,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100894135524711061, guid: 4f30d8f3e54ec4d43891b1860a451c18,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.82333434
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f30d8f3e54ec4d43891b1860a451c18, type: 3}
@@ -1098,7 +1103,7 @@ PrefabInstance:
     - target: {fileID: 8581816340129110689, guid: 9d252c786cad51746a87aeed745a2b89,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.33
+      value: 4.47
       objectReference: {fileID: 0}
     - target: {fileID: 8581816340129110689, guid: 9d252c786cad51746a87aeed745a2b89,
         type: 3}
@@ -1157,7 +1162,7 @@ PrefabInstance:
     - target: {fileID: 8581816340129110689, guid: 9d252c786cad51746a87aeed745a2b89,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.68
+      value: -1.55
       objectReference: {fileID: 0}
     - target: {fileID: 8581816340129110689, guid: 9d252c786cad51746a87aeed745a2b89,
         type: 3}
@@ -2255,7 +2260,7 @@ PrefabInstance:
     - target: {fileID: 8581816340129110689, guid: 9d252c786cad51746a87aeed745a2b89,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.67
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 8581816340129110689, guid: 9d252c786cad51746a87aeed745a2b89,
         type: 3}
@@ -2526,7 +2531,7 @@ PrefabInstance:
     - target: {fileID: 993482698760319167, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
       propertyPath: m_Name
-      value: Wall Soft
+      value: Wall Slippery
       objectReference: {fileID: 0}
     - target: {fileID: 6100894135524711061, guid: 4f30d8f3e54ec4d43891b1860a451c18,
         type: 3}
@@ -2747,6 +2752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 14.37941
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770433047558953848, guid: 30c7442c9369ae54198ad7a319482437,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 5770433047975184490, guid: 30c7442c9369ae54198ad7a319482437,
         type: 3}
