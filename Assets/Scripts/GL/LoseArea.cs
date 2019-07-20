@@ -7,7 +7,7 @@ public class LoseArea : MonoBehaviour
     /// <summary>
     /// Wait (in sec) before destroy
     /// </summary>
-    public float waitBeforeDestroy = 2.0f;
+    public float waitBeforeDestroy = 1.5f;
 
     /// <summary>
     /// Will check if a ball collided with this object
