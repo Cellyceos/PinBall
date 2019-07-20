@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8933647425780061987}
   - component: {fileID: 6490376783972662622}
   - component: {fileID: 4562049845408530967}
+  - component: {fileID: 2430215263226820277}
   m_Layer: 0
   m_Name: Puck
   m_TagString: Untagged
@@ -106,3 +107,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 500
+--- !u!114 &2430215263226820277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064012603538773491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd92cd30ffae484b905f14566553f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10

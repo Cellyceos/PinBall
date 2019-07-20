@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9066629789406462872}
   - component: {fileID: 4792945053566351538}
   - component: {fileID: 6173291640243746365}
+  - component: {fileID: 6417279929836486293}
   m_Layer: 0
   m_Name: Wall Bumper
   m_TagString: Untagged
@@ -105,3 +106,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 400
+--- !u!114 &6417279929836486293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6936071430143802690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd92cd30ffae484b905f14566553f32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10
