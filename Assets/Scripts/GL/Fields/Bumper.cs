@@ -17,11 +17,11 @@ public class Bumper : MonoBehaviour
     /// <param name="collision"></param>
     void OnCollisionEnter(Collision collision)
     {
-        var ball = collision.transform.gameObject;
+        var ball = collision.transform.GetComponent<Ball>();
 
         if (ball)
         {
-            ball.GetComponent<Rigidbody>().AddForce(-(collision.contacts[0].normal * bounceForce));
+            ball.AddForce(-(collision.contacts[0].normal * bounceForce));
         }
     }
 }

@@ -17,7 +17,7 @@ public class LoseArea : MonoBehaviour
     {
         var ball = collider.transform.gameObject;
 
-        if (ball != null)
+        if (ball.GetComponent<Ball>())
         {
             StartCoroutine(WaitAndDestroy(ball));
         }
