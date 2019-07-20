@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(HingeJoint))]
 public class Flipper : MonoBehaviour
 {
     private HingeJoint _hingeJoint;
-
-    [SerializeField]
-    private float _timeDelay = 0.1f;
 
     /// <summary>
     /// Initialization
@@ -25,23 +21,13 @@ public class Flipper : MonoBehaviour
     public void RotateUp()
     {
         _hingeJoint.useMotor = true;
-        StartCoroutine(RotateDown());
     }
 
     /// <summary>
     /// Rotate down the flipper
     /// </summary>
-    public IEnumerator RotateDown()
+    public void RotateDown()
     {
-        yield return new WaitForSeconds(_timeDelay);
         _hingeJoint.useMotor = false;
-    }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            RotateUp();
-        }
     }
 }

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8134814448546199659}
   - component: {fileID: 8134814448546199655}
   - component: {fileID: 8134814448546199656}
-  - component: {fileID: 8134814448546199654}
   m_Layer: 0
   m_Name: Flipper Left
   m_TagString: Untagged
@@ -145,16 +144,3 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &8134814448546199654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8134814448546199661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11008db52690eed4a846821e3191b141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timeDelay: 0.1
