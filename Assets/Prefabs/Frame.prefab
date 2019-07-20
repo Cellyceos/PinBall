@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 1013232712752414678}
   - component: {fileID: 1013232712752414679}
   m_Layer: 0
-  m_Name: Floor
+  m_Name: Game Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 1013232713542872420}
   - component: {fileID: 1013232713542872421}
   m_Layer: 0
-  m_Name: Floor (1)
+  m_Name: Lose Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1286,7 +1286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013232713998606870}
   m_Layer: 0
-  m_Name: Board
+  m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
