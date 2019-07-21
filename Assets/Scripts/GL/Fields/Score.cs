@@ -1,10 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
 public class Score : MonoBehaviour
 {
+    /// <summary>
+    /// Raise when the score was gain
+    /// </summary>
+    public static Action<int> onScoreGain;
+
+    /// <summary>
+    /// Score
+    /// </summary>
     public int score;
 
     /// <summary>
@@ -15,7 +22,7 @@ public class Score : MonoBehaviour
     {
         if (collision.transform.GetComponent<Ball>())
         {
-            //do something
+            onScoreGain?.Invoke(score);
         }
     }
 }

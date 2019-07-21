@@ -1,18 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// 
+    /// </summary>
+    public static Action<int> onScoreChanged;
+    private int _score;
+
+    /// <summary>
+    /// Initialization
+    /// </summary>
+   void Start()
     {
-        
+        //Subscribe
+        Score.onScoreGain += onScoreGain;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
+        //Unsubscribe
+        Score.onScoreGain -= onScoreGain;
+    }
+
+    void onScoreGain(int score)
+    {
+        _score += score;
+
+        //Inform subscribers
+        onScoreChanged?.Invoke(_score);
     }
 }
