@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
+    /// <summary>
+    /// Raise when the ball was launched
+    /// </summary>
+    public static Action onBallLaunched;
+
+    /// <summary>
+    /// Raise when power was changed
+    /// </summary>
     public static Action<float> onPowerChanged;
 
     /// <summary>
@@ -44,6 +52,8 @@ public class SpawnPoint : MonoBehaviour
             // Spawn it at the spawnPoint and add force
             var ball = Instantiate(ballModel, transform.position, transform.rotation);
             ball.GetComponent<Rigidbody>().AddForce(Vector3.forward * forcePower, ForceMode.VelocityChange);
+
+            onBallLaunched?.Invoke();
         }
 
         // Inform subscribers
