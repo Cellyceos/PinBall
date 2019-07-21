@@ -3,19 +3,25 @@ using System.Collections;
 
 public class FlippersController : MonoBehaviour
 {
-    [SerializeField]
-    private Flipper _leftFlipper;
+    private Flipper[] _flippers;
 
-    [SerializeField]
-    private Flipper _rightFlipper;
+    /// <summary>
+    /// Initializing
+    /// </summary>
+    private void Start()
+    {
+        _flippers = GetComponentsInChildren<Flipper>();
+    }
 
     /// <summary>
     /// Rotate flippers to up
     /// </summary>
     public void RotateUp()
     {
-        _leftFlipper.RotateUp();
-        _rightFlipper.RotateUp();
+        foreach(Flipper flipper in _flippers)
+        {
+            flipper.RotateUp();
+        }
     }
 
     /// <summary>
@@ -23,8 +29,10 @@ public class FlippersController : MonoBehaviour
     /// </summary>
     public void RotateDown()
     {
-        _leftFlipper.RotateDown();
-        _rightFlipper.RotateDown();
+        foreach (Flipper flipper in _flippers)
+        {
+            flipper.RotateDown();
+        }
     }
 
     // Update is called once per frame
