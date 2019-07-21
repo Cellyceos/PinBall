@@ -6,6 +6,11 @@ using UnityEngine;
 public class LoseArea : MonoBehaviour
 {
     /// <summary>
+    /// Raise when the ball was out
+    /// </summary>
+    public static Action onBallOut;
+
+    /// <summary>
     /// Wait (in sec) before destroy
     /// </summary>
     public float waitBeforeDestroy = 1.5f;
@@ -21,6 +26,7 @@ public class LoseArea : MonoBehaviour
         if (ball.GetComponent<Ball>())
         {
             StartCoroutine(WaitAndDestroy(ball));
+            onBallOut?.Invoke();
         }
     }
 
