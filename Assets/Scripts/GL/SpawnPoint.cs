@@ -39,25 +39,30 @@ public class SpawnPoint : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             _power += powerGain * Time.deltaTime;
         }
 
         var clampedPower = Mathf.Clamp01(_power);
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(0))
         {
-            var forcePower = minAppliedForce + (clampedPower * (maxAppliedForce - minAppliedForce));
-            _power = 0f;
-
-            // Spawn it at the spawnPoint and add force
-            var ball = Instantiate(ballModel, transform.position, transform.rotation);
-            ball.GetComponent<Rigidbody>().AddForce(Vector3.forward * forcePower, ForceMode.VelocityChange);
-
-            onBallLaunched?.Invoke();
+            LaunchBall(clampedPower);
+            clampedPower = _power = 0.0f;
         }
 
         // Inform subscribers
         onPowerChanged?.Invoke(clampedPower);
+    }
+
+    public void LaunchBall(float power)
+    {
+        var forcePower = minAppliedForce + (power * (maxAppliedForce - minAppliedForce));
+
+        // Spawn it at the spawnPoint and add force
+        var ball = Instantiate(ballModel, transform.position, transform.rotation);
+        ball.GetComponent<Rigidbody>().AddForce(Vector3.forward * forcePower, ForceMode.VelocityChange);
+
+        onBallLaunched?.Invoke();
     }
 }
