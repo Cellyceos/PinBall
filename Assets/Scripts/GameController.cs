@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
    void Start()
     {
         //Subscribe
+        SpawnPoint.onBallLaunched += onGameBegin;
         Score.onScoreGain += onScoreGain;
         LoseArea.onBallOut += onGameOver;
     }
@@ -22,6 +23,7 @@ public class GameController : MonoBehaviour
     void OnDestroy()
     {
         //Unsubscribe
+        SpawnPoint.onBallLaunched -= onGameBegin;
         Score.onScoreGain -= onScoreGain;
         LoseArea.onBallOut -= onGameOver;
     }
@@ -34,9 +36,15 @@ public class GameController : MonoBehaviour
         onScoreChanged?.Invoke(_score);
     }
 
+    void onGameBegin()
+    {
+
+    }
+
     void onGameOver()
     {
         _score = 0;
+
 
         //Inform subscribers
         onScoreChanged?.Invoke(_score);
