@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     /// <summary>
-    /// 
+    /// Raise when game score was changed
     /// </summary>
     public static Action<int> onScoreChanged;
     private int _score;

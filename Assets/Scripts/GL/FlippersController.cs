@@ -7,7 +7,7 @@ public class FlippersController : MonoBehaviour
     /// <summary>
     /// Initializing
     /// </summary>
-    private void Start()
+    void Start()
     {
         _flippers = GetComponentsInChildren<Flipper>();
     }

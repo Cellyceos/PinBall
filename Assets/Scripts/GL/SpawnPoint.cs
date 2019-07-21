@@ -34,10 +34,11 @@ public class SpawnPoint : MonoBehaviour
     public float powerGain = 1.2f;
     private float _power = 0.0f;
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame 
+    /// </summary>
     void Update()
     {
-        // If the key is down gain power
         if (Input.GetMouseButton(1))
         {
             _power += powerGain * Time.deltaTime;
