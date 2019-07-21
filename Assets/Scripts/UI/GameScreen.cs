@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameScreen : MonoBehaviour
 {
-    private Image _powerImage;
+    private Image _powerIndicator;
     private TextMeshProUGUI _scoreText;
 
     /// <summary>
@@ -15,7 +15,7 @@ public class GameScreen : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        _powerImage = GetComponentInChildren<Image>();
+        _powerIndicator = GetComponentInChildren<Image>();
         _scoreText = GetComponentInChildren<TextMeshProUGUI>();
 
         //Subscribe
@@ -32,7 +32,7 @@ public class GameScreen : MonoBehaviour
 
     void onPowerChanged(float power)
     {
-        _powerImage.fillAmount = power;
+        _powerIndicator.fillAmount = power;
     }
 
     void onScoreChanged(int score)
