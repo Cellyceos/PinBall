@@ -103,6 +103,8 @@ public class GameController : MonoBehaviour
         _gameScreen.Hide();
 
         _spawnPoint.enabled = false;
+
+        _flippers.RotateDown();
         _flippers.enabled = false;
 
         _gameOverScreen.SetFinalScore(_score);
