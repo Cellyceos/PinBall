@@ -16,17 +16,27 @@ public class GameController : MonoBehaviour
     {
         //Subscribe
         Score.onScoreGain += onScoreGain;
+        LoseArea.onBallOut += onGameOver;
     }
 
     void OnDestroy()
     {
         //Unsubscribe
         Score.onScoreGain -= onScoreGain;
+        LoseArea.onBallOut -= onGameOver;
     }
 
     void onScoreGain(int score)
     {
         _score += score;
+
+        //Inform subscribers
+        onScoreChanged?.Invoke(_score);
+    }
+
+    void onGameOver()
+    {
+        _score = 0;
 
         //Inform subscribers
         onScoreChanged?.Invoke(_score);

@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc237a945176dd248be7571ac3717737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTextFormat: 'Score: {0}'
 --- !u!1001 &82542346
 PrefabInstance:
   m_ObjectHideFlags: 0
