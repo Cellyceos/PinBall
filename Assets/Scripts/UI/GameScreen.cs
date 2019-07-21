@@ -1,8 +1,9 @@
-﻿using TMPro;
+﻿using Assets.Scripts.UI;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameScreen : MonoBehaviour
+public class GameScreen : MonoBehaviour, IUserInterface
 {
     private Image _powerIndicator;
     private TextMeshProUGUI _scoreText;
@@ -38,5 +39,15 @@ public class GameScreen : MonoBehaviour
     void onScoreChanged(int score)
     {
         _scoreText.text = string.Format(scoreTextFormat, score);
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
     }
 }
