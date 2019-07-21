@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(HingeJoint))]
 public class Flipper : MonoBehaviour
@@ -27,5 +28,24 @@ public class Flipper : MonoBehaviour
     public void RotateDown()
     {
         _hingeJoint.useMotor = false;
+    }
+
+    /// <summary>
+    ///     Uses to rotate the flipper in AI mode.
+    /// </summary>
+    /// <param name="collision"></param>
+    void OnCollisionEnter(Collision collision)
+    {
+        if (AIHelper.enabled && collision.gameObject.GetComponent<Ball>())
+        {
+            StartCoroutine(Pull());
+        }
+    }
+
+    public IEnumerator Pull()
+    {
+        RotateUp();
+        yield return new WaitForSeconds(Random.Range(AIHelper.minDelayTime, AIHelper.maxDelayTime));
+        RotateDown();
     }
 }

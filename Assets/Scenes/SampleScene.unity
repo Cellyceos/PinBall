@@ -811,6 +811,7 @@ GameObject:
   - component: {fileID: 416544987}
   - component: {fileID: 416544986}
   - component: {fileID: 416544985}
+  - component: {fileID: 416544988}
   m_Layer: 0
   m_Name: GameOver
   m_TagString: Untagged
@@ -902,6 +903,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &416544988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416544983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685ced0fc0d0ddd4d83cfa03a827fbe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restartButton: {fileID: 720574582}
+  _menuButton: {fileID: 30712701}
+  _scoreText: {fileID: 2095831789}
+  scoreTextFormat: 'Final Score: {0}'
 --- !u!1 &450205142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1196,7 @@ GameObject:
   - component: {fileID: 605874657}
   - component: {fileID: 605874656}
   - component: {fileID: 605874655}
+  - component: {fileID: 605874658}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -1269,6 +1287,20 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &605874658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605874653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b34ef714b0ad1a4d922dd6dcba553b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startButton: {fileID: 1535845495}
+  _aiButton: {fileID: 151004423}
 --- !u!1 &647687341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1653,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725302882}
   m_CullTransparentMesh: 0
+--- !u!114 &727706191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5770433048909235782, guid: 30c7442c9369ae54198ad7a319482437,
+    type: 3}
+  m_PrefabInstance: {fileID: 5770433048270609278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a217815f7bd05b5498e15ea2eff8c741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &740366649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,6 +1708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85019dbfcb26dc4d9bc17289dc7dd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnPoint: {fileID: 727706191}
+  _flippers: {fileID: 1815478732}
+  _mainScreen: {fileID: 605874658}
+  _gameScreen: {fileID: 32891873}
+  _gameOverScreen: {fileID: 416544988}
 --- !u!1 &910246413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2759,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743729238}
   m_CullTransparentMesh: 0
+--- !u!114 &1815478732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 753133903655234437, guid: 30c7442c9369ae54198ad7a319482437,
+    type: 3}
+  m_PrefabInstance: {fileID: 5770433048270609278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee0c8ca32ce9b645b430e30e995e7d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2095831787
 GameObject:
   m_ObjectHideFlags: 0
